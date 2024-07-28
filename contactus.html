@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="excelsheet.css">
+</head>
+<body>
+	<div class="container">
+             <form autocomplete="off" method="post" name="google-sheet">
+                     <h3><center>Contact Form </center></h3>
+                     <input type="text" placeholder="Type your name" name="name" required>
+					 <input type="email" placeholder="Type your email" name="email" required>
+                     <input type="text" placeholder="Type your number" name="mobile" maxlength="10" required>
+            <select name="degree" required>
+				<option value="Not Selected">Select an option</option>
+				<option value="Technical Issues">Technical Issues</option>
+				<option value="Login Problem">Login Problem</option>
+				<option value="Registration Problem">Registration Problem</option>
+				<option value="Server Problem">Server Problems</option>
+			</select>
+			<textarea rows="4" placeholder="How can help you?" name="message"></textarea>
+			<button type="submit" name="submit">Submit </button>
+			<button type="reset" class="reset">Reset</button>
+		
+			<a><a href="https://docs.google.com/spreadsheets/d/1s9NuVZ3b9pth0Frk7feNA7QEQghc33erQxYHNxxgSPA/edit?gid=0#gid=0"></a>
+</form>
+</div>
+
+
+
+<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz16g5ppNLL-NIx_BwpS6ANwwbMMKROL7P-gQCnrthmIIHYDefkf7iFkOb5qScknAZT/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'post', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+</script>
+
+</body>
+</html>
+
+  
+
+
+

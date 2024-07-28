@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+		form{
+			background-color: turquoise;
+		}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+			background-color: #fda9d3;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: turquoise;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .form-group .radio-label,
+        .form-group .checkbox-label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #fda9d3;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #fda9d3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Volunteer Sign Up Page</h2>
+        <form action="/submit" method="post">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Feedback Section -->
+            <div class="form-group">
+                <label for="feedback">Your Job Details:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+
+            <!-- Satisfaction Rating -->
+            <div class="form-group">
+                <label>Job requirement?</label>
+                <div>
+                    <input type="radio" id="very-satisfied" name="satisfaction" value="very-satisfied">
+                    <label for="very-satisfied" class="radio-label">Delivering flyers</label>
+                </div>
+                <div>
+                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+                    <label for="satisfied" class="radio-label">Taking phone calls</label>
+                </div>
+                <div>
+                    <input type="radio" id="neutral" name="satisfaction" value="neutral">
+                    <label for="neutral" class="radio-label">Entering Data</label>
+                </div>
+                <div>
+                    <input type="radio" id="dissatisfied" name="satisfaction" value="dissatisfied">
+                    <label for="dissatisfied" class="radio-label">Public Reactions</label>
+                </div>
+                <div>
+                    <input type="radio" id="very-dissatisfied" name="satisfaction" value="very-dissatisfied">
+                    <label for="very-dissatisfied" class="radio-label">Door to Door</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="text">Enter your Address:</label>
+                <input type="text" id="Enter Your Address" name="Enter Your Address" required>
+            </div>
+
+            
+
+
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit"><a href="index.html">Submit</a></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

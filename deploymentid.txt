@@ -1,0 +1,5 @@
+Deployment ID
+AKfycbz16g5ppNLL-NIx_BwpS6ANwwbMMKROL7P-gQCnrthmIIHYDefkf7iFkOb5qScknAZT
+
+URL
+https://script.google.com/macros/s/AKfycbz16g5ppNLL-NIx_BwpS6ANwwbMMKROL7P-gQCnrthmIIHYDefkf7iFkOb5qScknAZT/exec
